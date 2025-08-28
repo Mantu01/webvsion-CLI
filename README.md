@@ -1,76 +1,78 @@
-# WebVision AI Agent CLI
+# webVision-CLI
 
-A professional command-line interface for AI interactions with customizable themes and easy extensibility.
+**webVision-CLI** is a Website Automation Agent designed to interact with websites via the command line. It leverages modern automation and AI tools to perform tasks such as browsing, data extraction, and automated interactions, making it useful for developers, testers, and automation enthusiasts.
+
+## Features
+
+- **Website Automation**: Automate browser actions using [Playwright](https://playwright.dev/).
+- **AI Integration**: Utilize OpenAI's agent APIs for intelligent automation and decision-making.
+- **Interactive CLI**: User-friendly command-line interface powered by [Inquirer](https://www.npmjs.com/package/inquirer).
+- **Configurable**: Supports environment variables via `.env` files.
+- **Validation**: Input validation using [Zod](https://zod.dev/).
+- **Colorful Output**: Enhanced CLI output with [Chalk](https://www.npmjs.com/package/chalk).
 
 ## Installation
 
-1. Clone or create the project directory
+1. Clone the repository or download the source code.
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
-3. Make the CLI globally accessible:
-   ```bash
-   npm link
-   ```
+3. Create a `.env` file in the root directory for environment-specific configuration.
+```bash
+   OPENAI_API_KEY=your_openai_api_key_here
+```
 
 ## Usage
 
-Start the CLI by typing:
+You can run the CLI using:
+
 ```bash
-webvision
+npm start
 ```
 
-### First Time Setup
-- Enter your OpenAI API key
-- Choose your preferred color theme
+Or for development with auto-reload:
 
-### Available Commands
-- `/help` - Show help information
-- `/clear` - Clear the screen
-- `/apikey` - Update OpenAI API key
-- `/theme` - Change color theme
-- `/status` - Show current configuration
-- `/exit` - Exit the application
-
-### Features
-- 🎨 5 beautiful color themes
-- 🔐 Secure API key storage
-- 📁 Clean project architecture
-- ⌨️ Arrow key navigation for selections
-- 🚀 Easy to extend
-
-### Project Structure
-```
-webvision-cli/
-├── src/
-│   ├── index.js              # Entry point
-│   ├── cli/
-│   │   └── WebVisionCLI.js   # Main CLI class
-│   ├── config/
-│   │   └── ConfigManager.js  # Configuration management
-│   ├── ui/
-│   │   ├── ThemeManager.js   # Theme system
-│   │   └── UIRenderer.js     # UI rendering
-│   └── commands/
-│       └── CommandHandler.js # Command processing
-├── package.json
-└── README.md
-```
-
-## Development
-
-Run in development mode:
 ```bash
 npm run dev
 ```
 
-## Extending the CLI
+Alternatively, after installing globally (or linking), you can use:
 
-To add new features:
-1. Add new commands in `CommandHandler.js`
-2. Create new UI components in the `ui/` directory
-3. Add configuration options in `ConfigManager.js`
+```bash
+webvision
+```
 
-The architecture is designed to be modular and easy to extend with new AI features.
+## Project Structure
+
+```
+webVision-CLI/
+├── src/
+│   └── index.js         # Main entry point for the CLI
+├── package.json         # Project metadata and dependencies
+├── package-lock.json    # Dependency lock file
+└── README.md            # Project documentation
+```
+
+## Dependencies
+
+- [@openai/agents](https://www.npmjs.com/package/@openai/agents)
+- [chalk](https://www.npmjs.com/package/chalk)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [inquirer](https://www.npmjs.com/package/inquirer)
+- [playwright](https://www.npmjs.com/package/playwright)
+- [zod](https://www.npmjs.com/package/zod)
+
+## Author
+
+Mantu Kumar
+
+## License
+
+ISC
+
+---
+
+*This project is actively maintained and open for contributions and suggestions.*
